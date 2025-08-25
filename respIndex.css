@@ -11,7 +11,7 @@ header { padding: 1rem; padding-bottom: 40px; background-color: var(--accent-col
 
 h2.header { margin-bottom: 0px; }
 
-div.nav-links { display: flex; justify-content: center; gap: 7rem; margin-top: 0.5rem; }
+div.nav-links { display: flex; justify-content: center; gap: 5rem; row-gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem; }
 a.header { color: white; }
 a:visited.header { color: white; }
 a.header-home { color: white; text-decoration: none; }
@@ -59,7 +59,7 @@ a:visited.header-home { color: white; text-decoration: none; }
 
 .project-detail { max-width: 800px; margin: auto; padding: 2rem 1rem; line-height: 1.6; }
 .project-detail h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-.project-detail p { background: rgba(238, 238, 238, 0.8); padding: 0.5rem 1rem; border-radius: 8px; font-weight: bold; }
+.project-detail p { background: rgba(238, 238, 238, 0.8); padding: 0.5rem 1rem; border-radius: 8px; font-weight: bolder; }
 .project-detail h2, .project-detail h3 { background: rgba(238, 238, 238, 0.8); padding: 0.5rem 1rem; border-radius: 8px;
         color: var(--text-color); text-align: center; font-weight: bolder; text-shadow: 0 0 3px #7c3aed, 0 0 6px #fff; }
 .project-detail ul { list-style-type: none; padding: 0; margin: 1rem 0; display: flex; flex-wrap: wrap;
@@ -68,6 +68,11 @@ a:visited.header-home { color: white; text-decoration: none; }
     text-align: center; }
 .project-detail .hero { max-width: 800px; margin: auto; padding: 2rem 1rem; text-align: center; }
 .project-detail img { max-width: 100%; height: auto; }
+.project-detail legend { font-weight: bold; }
+
+fieldset { border: 1px solid #ccc; padding: 1.5em; margin: 1em 0; border-radius: 5px; position: relative; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05); }
+fieldset *:not(legend, input) { padding-left: 1em; }
+fieldset input, textarea { margin-left: 1em; }
 
 iframe { margin: 1rem 0; border-radius: 12px; }
 
@@ -75,6 +80,34 @@ img.imageWrap { float: left; padding-right: .5rem; border-radius: 12px;}
 div.image-gallery { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; object-fit: cover;
                     align-items: center; gap: 2rem; }
 div.image-gallery img { max-width: 35vw; height: auto; }
+
+footer { display: block; background-color: #222; color: white; text-align: center; padding: 1rem 0; font-size: 0.9rem; margin-top: 2rem; }
+
+footer { display: block !important; position: relative; z-index: 1; }
+
+footer nav a { color: #ddd; margin: 0 0.5em; text-decoration: none; }
+
+footer nav a:hover { text-decoration: underline; }
+
+.model-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.model-gallery li {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.model-gallery img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
 
 /* Spruce's Image Modal */
 .modal { display: none; position: fixed; z-index: 999; top: 0; left: 0; width: 100vw; height: 100vh;

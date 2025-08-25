@@ -2,10 +2,11 @@ function getel(id) {
     return document.getElementById(id);
 }
 const projectRoutes = {
-    "card1": "spriteGrid_Proj.html",
-    "card2": "respSite_Proj.html",
-    "card3": "booska_Proj.html",
-    "card4": "blink_Proj.html"
+    "card1": "topiccreator_Proj.html?v=" + Date.now(),
+    "card2": "spriteGrid_Proj.html?v=" + Date.now(),
+    "card3": "booska_Proj.html?v=" + Date.now(),
+    "card4": "blink_Proj.html?v=" + Date.now(),
+    "card5": "respSite_Proj.html?v=" + Date.now()
 };
 
 Object.entries(projectRoutes).forEach(([cardId, url]) => {
@@ -36,3 +37,29 @@ if (modalImg)
     modalImg.addEventListener("click", () => {
         modal.style.display = "none";
     });
+
+window.addEventListener("DOMContentLoaded", () => {
+    const versionTag = `v=${Date.now()}`;
+
+    // Update all image srcs
+    document.querySelectorAll("img").forEach(img => {
+        const src = img.getAttribute("src");
+        if (src && !src.includes("?")) {
+            img.setAttribute("src", `${src}?${versionTag}`);
+        }
+    });
+
+    // Optional: Update anchor hrefs (only if you want links to be cache-busted too)
+    document.querySelectorAll("a").forEach(link => {
+        const href = link.getAttribute("href");
+        if (
+            href &&
+            !href.startsWith("#") &&
+            !href.includes("?") &&
+            !href.includes("mailto") &&
+            !href.includes("youtu.be")
+        ) {
+            link.setAttribute("href", `${href}?${versionTag}`);
+        }
+    });
+});

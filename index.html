@@ -7,8 +7,11 @@
     <meta name="reply-to"    content="Gatene1@iCloud.com">
     <meta charset = "UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
-    <link rel="stylesheet" type="text/css" href="respIndex.css">
+    <link rel="stylesheet" type="text/css" href="respIndex.css?v=<?= Date.now ?>">
     <link rel="icon" href="Images/favicon.ico">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>David Riley's Portfolio</title>
 </head>
 <body>
@@ -18,7 +21,9 @@
 
     <div class = "nav-links">
         <a class="header" href = "projects.html">Projects</a>
+        <a class="header" href="models.html">3D Models</a>
         <a class="header" href = "about.html">About</a>
+        <a class="header" href = "respContact.html">Contact Me</a>
     </div>
 </header>
 <section class="hero">
@@ -30,27 +35,29 @@
 <section class="featured-projects">
     <h2>Featured Projects</h2>
     <div class="project-grid">
-        <!-- 4 Square Grid -->
+        <!-- 5 Square Grid -->
         <article class="project-card" id="card1">
+            <div class="thumb-wrapper">
+                <img src="Images/topicCreator2.png" alt="Topic Creator 2.5" />
+                <div class="badge version" title="The version of Topic Creator I lost in 2023 in a move.">
+                    v2.5 Complete!
+                </div>
+            </div>
+            <br clear="all">
+            <h3>Topic Creator 2.5</h3>
+            <p>A custom ideation engine that generates three-word topic seeds using a weighted pseudo-random algorithm.</p>
+<!--            <p>A Topic generator remade in Unity with the help of my AI Partner.</p>-->
+        </article>
+
+        <article class="project-card" id="card2">
             <div class = "thumb-wrapper">
-                <img src="Images/SpriteGrid-Temp-Thumb.png" alt="Preview of SpriteGrid tile-based editor and character" />
+                <img src="Images/SpriteGrid-Temp-Thumb.png" alt="SpriteGrid tile-based editor and character" />
                 <div class="badge version" title="A Finalized and stable build of SpriteGrid ">v3.3 Complete!</div>
             </div>
             <br clear="all">
             <h3>SpriteGrid</h3>
-            <p>Custom sprite editor built from scratch.</p>
-        </article>
-
-        <article class="project-card" id="card2">
-            <div class="thumb-wrapper">
-                <img src="Images/respSite-Thumb.png" alt="Responsive site with AI thumbnail" />
-                <div class="badge collab" title="The version of my site I never could quite get, until Spruce">
-                    Human + AI
-                </div>
-            </div>
-            <br clear="all">
-            <h3>Responsive Portfolio</h3>
-            <p>My portfolio site made with my AI Partner.</p>
+            <p>A cross-version sprite editor supporting legacy HexString and modern Uint32 formats. Built for flexible pixel art creation and export.</p>
+<!--            <p>Custom sprite editor built from scratch.</p>-->
         </article>
 
         <article class="project-card" id="card3">
@@ -74,14 +81,39 @@
             </div>
             <br clear="all">
             <h3>Blink</h3>
-            <p>Part 1 on HTML5 games that embody Game Design Principles.</p>
+            <p>Part 1 of Glean: an HTML5 prototype exploring Game Design Patterns through movement constraints.</p>
+<!--            <p>Part 1 on HTML5 games that embody Game Design Principles.</p>-->
+        </article>
+
+        <article class="project-card" id="card5">
+            <div class="thumb-wrapper">
+                <img src="Images/respSite-Thumb.png" alt="Responsive site with AI thumbnail" />
+                <div class="badge collab" title="The version of my site I never could quite get, until Spruce">
+                    Human + AI
+                </div>
+            </div>
+            <br clear="all">
+            <h3>Responsive Portfolio</h3>
+            <p>A responsive showcase of my work, designed and built by hand with my AI partner.</p>
+<!--            <p>Responsive portfolio site showcasing Human + AI collaboration.</p>-->
+<!--            <p>My portfolio site made with my AI Partner.</p>-->
         </article>
     </div>
 
     <a href="projects.html" class="view-all">View All Projects</a>
 </section>
+<footer>
+    <nav>
+        <a href="index.html">← Back to Projects</a> |
+        <a href="respContact.html">Contact Me</a> |
+        <a href="https://linkedin.com/in/david-riley-08a57551" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/Gatene1" target="_blank">GitHub</a>
+        <a href="https://ko-fi.com/thedavid" target="_blank">Ko-fi</a>
+    </nav>
+    <p>&copy; 2025 David Riley / Outbox Games</p>
+</footer>
 
-<script src="respPortfolio.js?v=1.0.0"></script>
+<script src="respPortfolio.js?v=1.0.1"></script>
 
 </body>
 </html>
